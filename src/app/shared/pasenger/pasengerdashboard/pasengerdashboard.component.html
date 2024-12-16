@@ -1,0 +1,20 @@
+<app-pasenger-count></app-pasenger-count>
+
+
+
+
+
+
+<!-- list  -->
+
+<ul class="list-gorup mb-4">
+    <li class="list-group-item" *ngFor="let pass2 of passenger">
+        {{pass2.fullname}}
+
+    </li>
+</ul>
+
+
+
+
+<app-pasengercard [getcard]="pass" *ngFor="let pass of passenger"></app-pasengercard>

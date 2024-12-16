@@ -1,0 +1,34 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 offcet-3">
+            
+
+<div class="card mb-4">
+    <div class="card-header">
+        <input
+        [disabled]="!isEdit"
+        
+        type="text" [value]="getcard.fullname"  #name class="form-control">
+        
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+           
+
+    </div>
+        </div>
+        <p class="mb-2 text-center"> <strong>chack in date : {{getcard.chackIndate  ? (getcard.chackIndate |date) : "NOt chacked date"}}</strong></p>
+
+        <p  class="text-center mb-2"><strong>children : {{getcard.childredn ? getcard.childredn.length : 0 }}</strong></p>
+        <div class="card-footer d-flex justify-content-bitween">
+            <button class="btn btn-primary" *ngIf="!isEdit" (click)="onEdit()">Edit</button>
+            <button class="btn btn-warning" *ngIf="isEdit" (click)="onupdate(name.value)">done</button>
+            <button class="btn btn-danger ml-3"  (click)="onDelet(getcard.id)">Dlelte</button>
+        </div>
+        
+</div>
+        </div>
+    </div>
+</div>
